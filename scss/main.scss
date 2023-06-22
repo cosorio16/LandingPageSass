@@ -1,0 +1,494 @@
+$color-fondo: #FFEFE7;
+$green: #7C6A0A;
+$whiteGreen: #BABD8D;
+$white: #FFFFFF;
+$orange: #E86424;
+$rosa: #FFDAC6;
+$orange-footer: #FA9500;
+$fontOne: IBM Plex Sans;
+$fontTwo: Montserrat;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body {
+    background-color: #ffefe7;
+}
+
+header {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        margin: 5px;
+        padding: 5px;
+
+        .title {
+            font-family: $fontOne;
+            color: $green;
+            font-size: 1.4rem;
+            font-weight: 900;
+            margin-left: 10px;
+        }
+
+        button {
+            margin-right: 10px;
+            background: none;
+            border: none;
+
+            i {
+                color: $green;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+
+main {
+    @include centrar;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    img {
+        margin: 10px;
+        width: 280px;
+        height: 300px;
+    }
+
+    h1 {
+        align-self: flex-start;
+        padding: 5px;
+        font-family: $fontOne;
+        font-size: 1.7rem;
+        color: $green;
+        margin-bottom: 20px
+    }
+
+    p {
+        @extend h1;
+        font-size: 0.9rem;
+        font-weight: 800;
+    }
+
+    button {
+        text-align: start;
+        padding: 10px;
+        padding-left: 20px;
+        font-family: $fontOne;
+        font-weight: 900;
+        width: 150px;
+        height: 50px;
+        color: $white;
+        background-color: $orange-footer;
+        border: none;
+        border-radius: 30px;
+    }
+}
+
+.healtcare {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+
+    h1 {
+        width: 60vw;
+        align-self: flex-start;
+        padding: 5px;
+        font-family: $fontTwo;
+        font-weight: bold;
+        font-size: 1.7rem;
+        color: $green;
+    }
+
+    .product-cards {
+        gap: 20px;
+    }
+
+    .card-product {
+        min-width: 170px;
+        margin-top: 30px;
+        background-color: $rosa;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 180px;
+        height: 280px;
+        padding: 15px;
+        padding-left: 20px;
+
+        .heart-icon {
+            width: 20px;
+            height: 20px;
+            background-image: url(/assets/svg/heart.svg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            align-self: flex-end;
+        }
+
+        .img-product {
+            width: 130px;
+            height: 200px;
+            margin-top: 10px;
+            background-image: url(/assets/img/products/toothbrush.jpg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            align-self: center;
+
+        }
+
+        .description {
+            width: 100%;
+            height: 70px;
+            padding: 5px;
+        }
+
+        h1 {
+            font-family: $fontOne;
+            color: $green;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        p {
+            margin-left: 5px;
+            font-size: 0.6rem;
+            color: $green;
+        }
+    }
+
+    .card-product:nth-child(2) {
+        .img-product {
+            background-image: url(/assets/img/products/hand-cream.jpeg)
+        }
+    }
+
+    .card-product:nth-child(3) {
+        .img-product {
+            background-image: url(/assets/img/products/serum.jpg)
+        }
+    }
+
+    .card-product:nth-child(4) {
+        .img-product {
+            background-image: url(/assets/img/products/organic-kit.jpg)
+        }
+    }
+
+    .card-product:nth-child(5) {
+        .img-product {
+            background-image: url(/assets/img/products/organic-soap.jpg)
+        }
+    }
+
+    .card-product:nth-child(6) {
+        .img-product {
+            background-image: url(/assets/img/products/guasha-kit.jpg)
+        }
+    }
+
+}
+
+.home {
+    @extend .healtcare;
+
+    .heart-iconWhite {
+        width: 20px;
+        height: 20px;
+        background-image: url(/assets/svg/heart-card.svg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        align-self: flex-end;
+    }
+
+    .card-product {
+        background-color: $whiteGreen;
+
+        h1,
+        p {
+            color: $white;
+        }
+    }
+
+
+}
+
+.whyUs {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+
+    img {
+        width: 72px;
+        height: 65px;
+    }
+
+    .whyUsEarth {
+        margin-top: 50px;
+        text-align: center;
+
+        P {
+            color: $orange;
+            font-family: $fontOne;
+            font-size: 0.85rem;
+            width: 165px;
+            height: 80px;
+            font-weight: bold
+        }
+    }
+
+    .whyUsLamp {
+        @extend .whyUsEarth;
+    }
+
+    h1 {
+        align-self: flex-start;
+        padding: 5px;
+        font-family: $fontOne;
+        font-size: 1.7rem;
+        color: $green;
+    }
+}
+
+.gallery {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    gap: 50px;
+
+    h1 {
+        align-self: flex-start;
+        padding: 5px;
+        font-family: $fontOne;
+        font-size: 1.7rem;
+        color: $green;
+    }
+
+    .gallery-card {
+        width: 300px;
+        height: 300px;
+        background-image: url(/assets/img/gallery-2.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+    }
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+
+    h1 {
+        align-self: flex-start;
+        padding: 5px;
+        font-family: $fontOne;
+        font-size: 1.7rem;
+        color: $green;
+    }
+
+    img {
+        min-width: 80vw;
+    }
+
+    .ccName {
+        color: $orange;
+        font-family: $fontOne;
+        font-weight: bold;
+        font-size: 1.6rem;
+        margin-top: 20px;
+    }
+
+    .street {
+        @extend .ccName;
+        font-size: 1rem;
+    }
+
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 100vw;
+    height: 400px;
+    background-color: $orange-footer;
+
+    h1 {
+        color: $white;
+        font-family: $fontOne;
+        font-weight: bold;
+    }
+
+    .ig {
+        margin-right: 20px;
+        width: 50px;
+        height: 50px;
+        background-image: url(/assets/img/instagram-logo.png);
+        border: none;
+        background-repeat: no-repeat;
+        background-color: transparent;
+    }
+
+    .fb {
+        @extend .ig;
+        background-image: url(/assets/img/facebook-logo.png);
+    }
+
+    .tw {
+        @extend .ig;
+        background-image: url(/assets/img/twitter-logo.png);
+    }
+}
+
+@media (max-width: 799px) {
+    .desktopButtons {
+        display: none;
+    }
+
+    .healtcare {
+        .product-cards {
+            display: flex;
+            overflow-x: scroll;
+            overscroll-behavior-x: contain;
+            scroll-snap-type: x mandatory;
+        }
+
+        .product-cards::-webkit-scrollbar {
+            height: 10px;
+        }
+
+        .product-cards::-webkit-scrollbar-thumb {
+            background-color: $orange;
+            border-radius: 20px;
+        }
+
+        .card-product {
+            scroll-snap-align: center;
+        }
+    }
+
+    .whyUs {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .gallery {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .gallery-card {
+        margin-bottom: 40px;
+    }
+}
+
+
+@media (min-width: 800px) {
+    nav {
+        h1 {
+            margin-left: 20px;
+        }
+
+        .desktopButtons {
+            margin-right: 20px;
+
+            button:hover {
+                background-color: rgba(218, 175, 175, 0.507);
+            }
+        }
+
+        .bars {
+            display: none;
+        }
+
+    }
+
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+
+        .info-content {
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+            margin-top: 50px;
+            padding: 20px;
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            button {
+                align-self: center;
+                margin-top: 40px;
+            }
+        }
+
+        img {
+            width: 1000px;
+            height: 400px;
+            margin: 20px;
+            margin-right: 60px;
+        }
+    }
+
+    .healtcare {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .product-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .whyUs {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .whyUsCards {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .gallery-cards {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 30px;
+        margin: 0 auto;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+}
