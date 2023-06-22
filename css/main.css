@@ -70,11 +70,6 @@ main button {
   border-radius: 30px;
 }
 
-.healtcare, .home {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 20px;
-}
 .healtcare h1, .home h1, .healtcare main p, .home main p, main .healtcare p, main .home p {
   width: 60vw;
   align-self: flex-start;
@@ -88,7 +83,6 @@ main button {
   gap: 20px;
 }
 .healtcare .card-product, .home .card-product {
-  min-width: 170px;
   margin-top: 30px;
   background-color: #FFDAC6;
   display: flex;
@@ -285,6 +279,11 @@ footer .tw {
   .desktopButtons {
     display: none;
   }
+  .healtcare, .home {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
   .healtcare .product-cards, .home .product-cards {
     display: flex;
     overflow-x: scroll;
@@ -350,19 +349,21 @@ footer .tw {
     width: 1000px;
     height: 400px;
     margin: 20px;
-    margin-right: 60px;
   }
   .healtcare, .home {
     display: flex;
     align-items: center;
     flex-direction: column;
+    border: 1px solid black;
+    overflow-y: hidden;
   }
   .product-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    margin: 0;
-    padding: 0;
+    border: 1px solid blue;
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .whyUs {
     display: flex;
@@ -379,7 +380,6 @@ footer .tw {
     justify-content: center;
     flex-direction: row;
     gap: 30px;
-    margin: 0 auto;
     padding: 10px;
     margin-top: 20px;
   }
