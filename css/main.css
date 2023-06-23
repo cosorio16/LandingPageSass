@@ -36,13 +36,16 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin: 0;
+  padding: 0;
 }
-main img {
-  margin: 10px;
-  width: 280px;
-  height: 300px;
+main .info-img {
+  width: 266px;
+  height: 400px;
+  background-image: url(/assets/img/main-2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 main h1, main p {
   align-self: flex-start;
@@ -53,8 +56,13 @@ main h1, main p {
   margin-bottom: 20px;
 }
 main p {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-weight: 800;
+}
+main p main {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
 }
 main button {
   text-align: start;
@@ -82,7 +90,7 @@ main button {
 .healtcare .product-cards, .home .product-cards {
   gap: 20px;
 }
-.healtcare .card-product, .home .card-product {
+.healtcare .product-cards .card-product, .home .product-cards .card-product {
   margin-top: 30px;
   background-color: #FFDAC6;
   display: flex;
@@ -94,7 +102,7 @@ main button {
   padding: 15px;
   padding-left: 20px;
 }
-.healtcare .card-product .heart-icon, .home .card-product .heart-icon {
+.healtcare .product-cards .card-product .heart-icon, .home .product-cards .card-product .heart-icon {
   width: 20px;
   height: 20px;
   background-image: url(/assets/svg/heart.svg);
@@ -103,7 +111,7 @@ main button {
   background-repeat: no-repeat;
   align-self: flex-end;
 }
-.healtcare .card-product .img-product, .home .card-product .img-product {
+.healtcare .product-cards .card-product .img-product, .home .product-cards .card-product .img-product {
   width: 130px;
   height: 200px;
   margin-top: 10px;
@@ -114,38 +122,51 @@ main button {
   border-radius: 10px;
   align-self: center;
 }
-.healtcare .card-product .description, .home .card-product .description {
+.healtcare .product-cards .card-product .description, .home .product-cards .card-product .description {
   width: 100%;
   height: 70px;
   padding: 5px;
+  margin-bottom: 5px;
 }
-.healtcare .card-product h1, .home .card-product h1, .healtcare .card-product main p, .home .card-product main p, main .healtcare .card-product p, main .home .card-product p {
+.healtcare .product-cards .card-product h1, .home .product-cards .card-product h1, .healtcare .product-cards .card-product main p, .home .product-cards .card-product main p, main .healtcare .product-cards .card-product p, main .home .product-cards .card-product p {
   font-family: IBM Plex Sans;
   color: #7C6A0A;
   font-size: 0.8rem;
   font-weight: bold;
 }
-.healtcare .card-product p, .home .card-product p {
+.healtcare .product-cards .card-product p, .home .product-cards .card-product p {
   margin-left: 5px;
   font-size: 0.6rem;
   color: #7C6A0A;
 }
-.healtcare .card-product:nth-child(2) .img-product, .home .card-product:nth-child(2) .img-product {
+.healtcare .product-cards .card-product:nth-child(2) .img-product, .home .product-cards .card-product:nth-child(2) .img-product {
   background-image: url(/assets/img/products/hand-cream.jpeg);
 }
-.healtcare .card-product:nth-child(3) .img-product, .home .card-product:nth-child(3) .img-product {
+.healtcare .product-cards .card-product:nth-child(3) .img-product, .home .product-cards .card-product:nth-child(3) .img-product {
   background-image: url(/assets/img/products/serum.jpg);
 }
-.healtcare .card-product:nth-child(4) .img-product, .home .card-product:nth-child(4) .img-product {
+.healtcare .product-cards .card-product:nth-child(4) .img-product, .home .product-cards .card-product:nth-child(4) .img-product {
   background-image: url(/assets/img/products/organic-kit.jpg);
 }
-.healtcare .card-product:nth-child(5) .img-product, .home .card-product:nth-child(5) .img-product {
+.healtcare .product-cards .card-product:nth-child(5) .img-product, .home .product-cards .card-product:nth-child(5) .img-product {
   background-image: url(/assets/img/products/organic-soap.jpg);
 }
-.healtcare .card-product:nth-child(6) .img-product, .home .card-product:nth-child(6) .img-product {
+.healtcare .product-cards .card-product:nth-child(6) .img-product, .home .product-cards .card-product:nth-child(6) .img-product {
   background-image: url(/assets/img/products/guasha-kit.jpg);
 }
 
+.home .card-product {
+  background-color: #BABD8D;
+}
+.home .card-product .img-product {
+  background-image: url(/assets/img/gallery-3.jpg);
+}
+.home .card-product h1, .home .card-product p {
+  color: white;
+}
+.home .card-produc:nth-child(2) {
+  background-color: red;
+}
 .home .heart-iconWhite {
   width: 20px;
   height: 20px;
@@ -154,13 +175,6 @@ main button {
   background-position: center;
   background-repeat: no-repeat;
   align-self: flex-end;
-}
-.home .card-product {
-  background-color: #BABD8D;
-}
-.home .card-product h1,
-.home .card-product p {
-  color: #FFFFFF;
 }
 
 .whyUs {
@@ -214,6 +228,12 @@ main button {
   background-repeat: no-repeat;
   border-radius: 10px;
 }
+.gallery .gallery-card:nth-child(2) {
+  background-image: url(/assets/img/gallery-1.jpg);
+}
+.gallery .gallery-card:nth-child(3) {
+  background-image: url(/assets/img/gallery-3.jpg);
+}
 
 .location {
   display: flex;
@@ -247,11 +267,9 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 20px;
   width: 100vw;
   height: 400px;
+  margin: 0 auto;
   background-color: #FA9500;
 }
 footer h1, footer main p, main footer p {
@@ -279,6 +297,12 @@ footer .tw {
   .desktopButtons {
     display: none;
   }
+  main {
+    padding: 20px;
+  }
+  main .info-content p {
+    font-size: 0.8rem;
+  }
   .healtcare, .home {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -288,6 +312,7 @@ footer .tw {
     display: flex;
     overflow-x: scroll;
     overscroll-behavior-x: contain;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
   }
   .healtcare .product-cards::-webkit-scrollbar, .home .product-cards::-webkit-scrollbar {
@@ -315,6 +340,9 @@ footer .tw {
   }
 }
 @media (min-width: 800px) {
+  html {
+    overflow-x: hidden;
+  }
   nav h1, nav main p, main nav p {
     margin-left: 20px;
   }
@@ -328,13 +356,16 @@ footer .tw {
     display: none;
   }
   main {
-    display: flex;
-    flex-direction: row-reverse;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
   }
   main .info-content {
     display: flex;
     flex-direction: column;
-    align-self: flex-start;
     margin-top: 50px;
     padding: 20px;
   }
@@ -351,36 +382,50 @@ footer .tw {
     margin: 20px;
   }
   .healtcare, .home {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border: 1px solid black;
-    overflow-y: hidden;
-  }
-  .product-cards {
-    border: 1px solid blue;
-    display: flex;
     width: 90%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow-x: hidden;
+    overscroll-behavior-x: hidden;
+    overflow-y: hidden;
+    margin: 0 auto;
+    padding: 50px;
+  }
+  .healtcare .product-cards, .home .product-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    overflow-y: auto;
+    align-items: center;
+    justify-items: center;
+    overflow-x: hidden;
   }
   .whyUs {
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
   }
   .whyUsCards {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   .gallery-cards {
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     flex-direction: row;
     gap: 30px;
     padding: 10px;
     margin-top: 20px;
+  }
+  .location {
+    margin: 0 auto;
+  }
+  .location img {
+    align-self: center;
+    width: 300px;
+    height: 400px;
   }
 }/*# sourceMappingURL=main.css.map */
