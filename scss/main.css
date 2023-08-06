@@ -1,0 +1,393 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffefe7;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+  padding: 5px;
+}
+header nav .title {
+  font-family: IBM Plex Sans;
+  color: #7C6A0A;
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin-left: 10px;
+}
+header nav button {
+  margin-right: 10px;
+  background: none;
+  border: none;
+}
+header nav button i {
+  color: #7C6A0A;
+  font-size: 1.5rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+main img {
+  margin: 10px;
+  width: 280px;
+  height: 300px;
+}
+main h1, main p {
+  align-self: flex-start;
+  padding: 5px;
+  font-family: IBM Plex Sans;
+  font-size: 1.7rem;
+  color: #7C6A0A;
+  margin-bottom: 20px;
+}
+main p {
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+main button {
+  text-align: start;
+  padding: 10px;
+  padding-left: 20px;
+  font-family: IBM Plex Sans;
+  font-weight: 900;
+  width: 150px;
+  height: 50px;
+  color: #FFFFFF;
+  background-color: #FA9500;
+  border: none;
+  border-radius: 30px;
+}
+
+.healtcare, .home {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.healtcare h1, .home h1, .healtcare main p, .home main p, main .healtcare p, main .home p {
+  width: 60vw;
+  align-self: flex-start;
+  padding: 5px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 1.7rem;
+  color: #7C6A0A;
+}
+.healtcare .product-cards, .home .product-cards {
+  gap: 20px;
+}
+.healtcare .card-product, .home .card-product {
+  min-width: 170px;
+  margin-top: 30px;
+  background-color: #FFDAC6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 180px;
+  height: 280px;
+  padding: 15px;
+  padding-left: 20px;
+}
+.healtcare .card-product .heart-icon, .home .card-product .heart-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url(/assets/svg/heart.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-self: flex-end;
+}
+.healtcare .card-product .img-product, .home .card-product .img-product {
+  width: 130px;
+  height: 200px;
+  margin-top: 10px;
+  background-image: url(/assets/img/products/toothbrush.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  align-self: center;
+}
+.healtcare .card-product .description, .home .card-product .description {
+  width: 100%;
+  height: 70px;
+  padding: 5px;
+}
+.healtcare .card-product h1, .home .card-product h1, .healtcare .card-product main p, .home .card-product main p, main .healtcare .card-product p, main .home .card-product p {
+  font-family: IBM Plex Sans;
+  color: #7C6A0A;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.healtcare .card-product p, .home .card-product p {
+  margin-left: 5px;
+  font-size: 0.6rem;
+  color: #7C6A0A;
+}
+.healtcare .card-product:nth-child(2) .img-product, .home .card-product:nth-child(2) .img-product {
+  background-image: url(/assets/img/products/hand-cream.jpeg);
+}
+.healtcare .card-product:nth-child(3) .img-product, .home .card-product:nth-child(3) .img-product {
+  background-image: url(/assets/img/products/serum.jpg);
+}
+.healtcare .card-product:nth-child(4) .img-product, .home .card-product:nth-child(4) .img-product {
+  background-image: url(/assets/img/products/organic-kit.jpg);
+}
+.healtcare .card-product:nth-child(5) .img-product, .home .card-product:nth-child(5) .img-product {
+  background-image: url(/assets/img/products/organic-soap.jpg);
+}
+.healtcare .card-product:nth-child(6) .img-product, .home .card-product:nth-child(6) .img-product {
+  background-image: url(/assets/img/products/guasha-kit.jpg);
+}
+
+.home .heart-iconWhite {
+  width: 20px;
+  height: 20px;
+  background-image: url(/assets/svg/heart-card.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-self: flex-end;
+}
+.home .card-product {
+  background-color: #BABD8D;
+}
+.home .card-product h1,
+.home .card-product p {
+  color: #FFFFFF;
+}
+
+.whyUs {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.whyUs img {
+  width: 72px;
+  height: 65px;
+}
+.whyUs .whyUsEarth, .whyUs .whyUsLamp {
+  margin-top: 50px;
+  text-align: center;
+}
+.whyUs .whyUsEarth P, .whyUs .whyUsLamp P {
+  color: #E86424;
+  font-family: IBM Plex Sans;
+  font-size: 0.85rem;
+  width: 165px;
+  height: 80px;
+  font-weight: bold;
+}
+.whyUs h1, .whyUs main p, main .whyUs p {
+  align-self: flex-start;
+  padding: 5px;
+  font-family: IBM Plex Sans;
+  font-size: 1.7rem;
+  color: #7C6A0A;
+}
+
+.gallery {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  gap: 50px;
+}
+.gallery h1, .gallery main p, main .gallery p {
+  align-self: flex-start;
+  padding: 5px;
+  font-family: IBM Plex Sans;
+  font-size: 1.7rem;
+  color: #7C6A0A;
+}
+.gallery .gallery-card {
+  width: 300px;
+  height: 300px;
+  background-image: url("/assets/img/gallery-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+.gallery .gallery-card:nth-child(2) {
+  background-image: url("/assets/img/gallery-2.jpg");
+}
+.gallery .gallery-card:nth-child(3) {
+  background-image: url("/assets/img/gallery-3.jpg");
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.location h1, .location main p, main .location p {
+  align-self: flex-start;
+  padding: 5px;
+  font-family: IBM Plex Sans;
+  font-size: 1.7rem;
+  color: #7C6A0A;
+}
+.location img {
+  min-width: 80vw;
+}
+.location .ccName, .location .street {
+  color: #E86424;
+  font-family: IBM Plex Sans;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-top: 20px;
+}
+.location .street {
+  font-size: 1rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 100vw;
+  height: 400px;
+  background-color: #FA9500;
+}
+footer h1, footer main p, main footer p {
+  color: #FFFFFF;
+  font-family: IBM Plex Sans;
+  font-weight: bold;
+}
+footer .ig, footer .tw, footer .fb {
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  background-image: url(/assets/img/instagram-logo.png);
+  border: none;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+footer .fb {
+  background-image: url(/assets/img/facebook-logo.png);
+}
+footer .tw {
+  background-image: url(/assets/img/twitter-logo.png);
+}
+
+@media (max-width: 799px) {
+  .desktopButtons {
+    display: none;
+  }
+  .healtcare .product-cards, .home .product-cards {
+    display: flex;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+  }
+  .healtcare .product-cards::-webkit-scrollbar, .home .product-cards::-webkit-scrollbar {
+    height: 10px;
+  }
+  .healtcare .product-cards::-webkit-scrollbar-thumb, .home .product-cards::-webkit-scrollbar-thumb {
+    background-color: #E86424;
+    border-radius: 20px;
+  }
+  .healtcare .card-product, .home .card-product {
+    scroll-snap-align: center;
+  }
+  .whyUs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .gallery {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .gallery-card {
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 800px) {
+  nav h1, nav main p, main nav p {
+    margin-left: 20px;
+  }
+  nav .desktopButtons {
+    margin-right: 20px;
+  }
+  nav .desktopButtons button:hover {
+    background-color: rgba(218, 175, 175, 0.507);
+  }
+  nav .bars {
+    display: none;
+  }
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  main .info-content {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-top: 50px;
+    padding: 20px;
+  }
+  main .info-content p {
+    font-size: 1.2rem;
+  }
+  main .info-content button {
+    align-self: center;
+    margin-top: 40px;
+  }
+  main img {
+    width: 1000px;
+    height: 400px;
+    margin: 20px;
+    margin-right: 60px;
+  }
+  .healtcare, .home {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .product-cards {
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .whyUs {
+    display: flex;
+    flex-direction: column;
+  }
+  .whyUsCards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .gallery-cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 20px;
+  }
+}/*# sourceMappingURL=main.css.map */
